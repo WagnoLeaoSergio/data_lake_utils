@@ -1,0 +1,1 @@
+[{"id":"2d8b17ef.3ab318","type":"mongodb out","z":"3ab2bf2e.80cb3","mongodb":"e66f8865.c73768","name":"Local_DataBase","collection":"ISS","payonly":true,"upsert":false,"multi":false,"operation":"insert","x":722.5,"y":453,"wires":[]},{"id":"e66f8865.c73768","type":"mongodb","z":"","hostname":"192.168.128.3","port":"27017","db":"node_red_test","name":""}]

@@ -1,0 +1,3 @@
+DockerID: getserver
+
+Senha: GET334440

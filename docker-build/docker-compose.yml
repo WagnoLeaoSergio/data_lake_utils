@@ -1,0 +1,45 @@
+version: "3"
+services:
+  node_red:
+    image: nodered/node-red-docker
+    container_name: mynodered2
+    ports:
+    - "1880:1880"
+    networks:
+      - intranet2
+
+  mongodb:
+    image: mongo
+    container_name: mongo2
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_DATABASE=nodered
+      - MONGO_INITDB_ROOT_PASSWORD=12345
+    volumes:
+        - /home/getcomp/Documents/Wagno/Pesquisa/docker-build/mongoDB_data:/data/db
+    ports:
+    - "2701:2701"
+    networks:
+      - intranet2
+
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo_express
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=wagno
+      - ME_CONFIG_BASICAUTH_PASSWORD=user
+      - ME_CONFIG_MONGODB_PORT=27017
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=12345
+      - ME_CONFIG_MONGODB_SERVER=mongo2
+    depends_on:
+      - mongodb
+    ports:
+      - "8081:8081"
+    networks:
+      - intranet2
+
+networks:
+  intranet2:
+    driver: bridge

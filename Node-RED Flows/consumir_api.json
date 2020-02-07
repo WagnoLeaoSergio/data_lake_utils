@@ -1,0 +1,72 @@
+[
+    {
+        "id": "57d7c763.6f8a88",
+        "type": "tab",
+        "label": "Consumindo API",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "608fe4c4.ad31fc",
+        "type": "debug",
+        "z": "57d7c763.6f8a88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 804.5,
+        "y": 317,
+        "wires": []
+    },
+    {
+        "id": "8147c768.9819b8",
+        "type": "http request",
+        "z": "57d7c763.6f8a88",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "https://pokeapi.co/api/v2/pokemon/ditto/",
+        "tls": "",
+        "proxy": "",
+        "authType": "",
+        "x": 549,
+        "y": 315,
+        "wires": [
+            [
+                "608fe4c4.ad31fc",
+                "8ac8355b.516fa8"
+            ]
+        ]
+    },
+    {
+        "id": "88112767.878b38",
+        "type": "http in",
+        "z": "57d7c763.6f8a88",
+        "name": "",
+        "url": "pokemon/ditto/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 279.5,
+        "y": 316,
+        "wires": [
+            [
+                "8147c768.9819b8"
+            ]
+        ]
+    },
+    {
+        "id": "8ac8355b.516fa8",
+        "type": "http response",
+        "z": "57d7c763.6f8a88",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 813.5,
+        "y": 384,
+        "wires": []
+    }
+]

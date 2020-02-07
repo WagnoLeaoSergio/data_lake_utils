@@ -1,0 +1,249 @@
+[
+    {
+        "id": "e54cb29f.6c16d",
+        "type": "tab",
+        "label": "mongodb connection",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "62c1d3f4.fa146c",
+        "type": "debug",
+        "z": "e54cb29f.6c16d",
+        "name": "Debug data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 681.5,
+        "y": 83,
+        "wires": []
+    },
+    {
+        "id": "e350a95f.3b57c8",
+        "type": "mongodb2 in",
+        "z": "e54cb29f.6c16d",
+        "service": "_ext_",
+        "configNode": "84be9caf.2fab9",
+        "name": "Clever Cloud",
+        "collection": "sensor",
+        "operation": "insert",
+        "x": 690.5,
+        "y": 416,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b20fedcd.3de7d",
+        "type": "change",
+        "z": "e54cb29f.6c16d",
+        "name": "msg.attributes",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "data.attributes",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 392.5,
+        "y": 283,
+        "wires": [
+            [
+                "e350a95f.3b57c8",
+                "cc4cda4d.b800a8"
+            ]
+        ]
+    },
+    {
+        "id": "fa0c155d.87bb58",
+        "type": "poll-state",
+        "z": "e54cb29f.6c16d",
+        "name": "",
+        "server": "f774858.f8e4778",
+        "version": 1,
+        "updateinterval": "5",
+        "updateIntervalUnits": "minutes",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "sensor.isslocation",
+        "state_type": "str",
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "x": 136,
+        "y": 79,
+        "wires": [
+            [
+                "b20fedcd.3de7d",
+                "c58485bd.7a39e8",
+                "398d7dfc.66eb82",
+                "62c1d3f4.fa146c"
+            ]
+        ]
+    },
+    {
+        "id": "cc4cda4d.b800a8",
+        "type": "mongodb2 in",
+        "z": "e54cb29f.6c16d",
+        "service": "_ext_",
+        "configNode": "ed0e3666.c3ad18",
+        "name": "Atlas",
+        "collection": "sensorISS",
+        "operation": "insert",
+        "x": 679.5,
+        "y": 308,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "398d7dfc.66eb82",
+        "type": "change",
+        "z": "e54cb29f.6c16d",
+        "name": "iss_longitude",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "data.attributes.iss_position.longitude",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 224.5,
+        "y": 615,
+        "wires": [
+            [
+                "c9d089ca.0b8e98"
+            ]
+        ]
+    },
+    {
+        "id": "c58485bd.7a39e8",
+        "type": "change",
+        "z": "e54cb29f.6c16d",
+        "name": "iss_laitude",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "data.attributes.iss_position.latitude",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 226.5,
+        "y": 571,
+        "wires": [
+            [
+                "a033a538.396c48"
+            ]
+        ]
+    },
+    {
+        "id": "a033a538.396c48",
+        "type": "ui_text",
+        "z": "e54cb29f.6c16d",
+        "group": "cd696209.1d114",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Latitude",
+        "label": "Latitude",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 511.5,
+        "y": 572,
+        "wires": []
+    },
+    {
+        "id": "c9d089ca.0b8e98",
+        "type": "ui_text",
+        "z": "e54cb29f.6c16d",
+        "group": "cd696209.1d114",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Longitude",
+        "label": "Longitude",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 516.5,
+        "y": 615,
+        "wires": []
+    },
+    {
+        "id": "e262473c.c0d378",
+        "type": "comment",
+        "z": "e54cb29f.6c16d",
+        "name": "Criando uma interface com latitude e longitude",
+        "info": "",
+        "x": 374.5,
+        "y": 521,
+        "wires": []
+    },
+    {
+        "id": "84be9caf.2fab9",
+        "type": "mongodb2",
+        "z": "",
+        "uri": "mongodb://uj8ul4pdodzhngd7pnmf:Ok1Mm2HyWrZMAUx8NKeK@bjjphfy6hkfmve2-mongodb.services.clever-cloud.com:27017/bjjphfy6hkfmve2",
+        "name": "cleverCloud",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "f774858.f8e4778",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant"
+    },
+    {
+        "id": "ed0e3666.c3ad18",
+        "type": "mongodb2",
+        "z": "",
+        "uri": "mongodb://uj8ul4pdodzhngd7pnmf:4VAoswiRLKEVAX4B@sensors-shard-00-00-ihqei.mongodb.net:27017,sensors-shard-00-01-ihqei.mongodb.net:27017,sensors-shard-00-02-ihqei.mongodb.net:27017/test?ssl=true&replicaSet=SENSORS-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "name": "atlasCloud",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "cd696209.1d114",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "3fd170b0.e43b2",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3fd170b0.e43b2",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
