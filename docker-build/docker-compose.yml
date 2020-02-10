@@ -16,7 +16,7 @@ services:
       - MONGO_INITDB_DATABASE=nodered
       - MONGO_INITDB_ROOT_PASSWORD=12345
     volumes:
-        - /home/getcomp/Documents/Wagno/Pesquisa/docker-build/mongoDB_data:/data/db
+        - ./mongoDB_data:/data/db
     ports:
     - "2701:2701"
     networks:
@@ -37,6 +37,23 @@ services:
       - mongodb
     ports:
       - "8081:8081"
+    networks:
+      - intranet2
+
+  find3:
+    image: find3
+    container_name: find3_server
+    environment:
+      - MQTT_ADMIN=ADMIN
+      - MQTT_PASS=PASSWORD
+      - MQTT_SERVER="localhost:1883"
+      - MQTT_EXTERNAL='200.131.56.12'
+      - MQTT_PORT=1884
+    volumes:
+        - ./find3_DATA:/data
+    ports:
+      - "1884:1883"
+      - "8005:8003"
     networks:
       - intranet2
 
