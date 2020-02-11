@@ -1,0 +1,6 @@
+user ADMIN
+topic readwrite #
+
+user teste
+topic readwrite teste/#
+

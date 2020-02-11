@@ -1,0 +1,62 @@
+2020-02-11 16:58:02 [37m[DEBUG][0m [PID-14] mqtt.go Setup:49 setting up 
+2020-02-11 16:58:02 [37m[DEBUG][0m [PID-14] mqtt.go Setup:56 using current setup 
+2020-02-11 16:58:02 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:85 opening mosquitto database 
+2020-02-11 16:58:09 [37m[DEBUG][0m [PID-14] db.go Open:977 made tables 
+2020-02-11 16:58:09 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:94 starting database 
+2020-02-11 16:58:09 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:98 making acl 
+2020-02-11 16:58:09 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:103 making passwd 
+2020-02-11 16:58:09 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:108 making conf 
+2020-02-11 16:58:10 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:166 setup mosquitto and gave HUP signal 
+2020-02-11 16:58:13 [37m[DEBUG][0m [PID-14] mqtt.go Setup:78 finished setup 
+2020-02-11 16:58:13 [33m[WARN][0m [PID-14] server.go Run:39 Network Error : dial tcp: address tcp/1883": unknown port 
+2020-02-11 16:58:13 [37m[DEBUG][0m [PID-14] server.go Run:39 setup mqtt 
+2020-02-11 16:58:13 [37m[DEBUG][0m [PID-14] mode.go Run:49 current families: [] 
+2020-02-11 16:58:13 [36m[INFO][0m [PID-14] server.go Run:579 Running on 0.0.0.0:8003 
+2020-02-11 16:59:02 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 GET / 20.590065ms 
+2020-02-11 17:01:54 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 GET /ping 342.863µs 
+2020-02-11 17:01:54 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 GET /favicon.ico 179.018µs 
+2020-02-11 17:02:11 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 GET /now 384.859µs 
+2020-02-11 17:03:31 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:85 opening mosquitto database 
+2020-02-11 17:03:31 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:94 starting database 
+2020-02-11 17:03:31 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:98 making acl 
+2020-02-11 17:03:31 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:103 making passwd 
+2020-02-11 17:03:31 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:108 making conf 
+2020-02-11 17:03:31 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:166 setup mosquitto and gave HUP signal 
+2020-02-11 17:03:31 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 GET /api/v1/mqtt/TESTE 211.967982ms 
+2020-02-11 17:03:40 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 GET / 420.352µs 
+2020-02-11 17:03:44 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 POST / 441.814µs 
+2020-02-11 17:04:03 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:44584 POST / 379.123µs 
+2020-02-11 17:24:08 [36m[INFO][0m [PID-14] server.go func1:1360 172.25.0.1:45428 POST / 1.037456ms 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go Setup:49 setting up 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go Setup:56 using current setup 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go updateMosquittoConfig:85 opening mosquitto database 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go updateMosquittoConfig:94 starting database 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go updateMosquittoConfig:98 making acl 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go updateMosquittoConfig:103 making passwd 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go updateMosquittoConfig:108 making conf 
+2020-02-11 17:35:05 [37m[DEBUG][0m [PID-15] mqtt.go updateMosquittoConfig:166 setup mosquitto and gave HUP signal 
+2020-02-11 17:35:08 [37m[DEBUG][0m [PID-15] mqtt.go Setup:78 finished setup 
+2020-02-11 17:35:08 [33m[WARN][0m [PID-15] server.go Run:39 Network Error : dial tcp: address tcp/1883": unknown port 
+2020-02-11 17:35:08 [37m[DEBUG][0m [PID-15] server.go Run:39 setup mqtt 
+2020-02-11 17:35:08 [37m[DEBUG][0m [PID-15] mode.go Run:49 current families: [] 
+2020-02-11 17:35:08 [36m[INFO][0m [PID-15] server.go Run:579 Running on 0.0.0.0:8003 
+2020-02-11 17:35:52 [36m[INFO][0m [PID-15] server.go func1:1360 172.20.0.1:45932 POST / 782.54µs 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go Setup:49 setting up 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go Setup:56 using current setup 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:85 opening mosquitto database 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:94 starting database 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:98 making acl 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:103 making passwd 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:108 making conf 
+2020-02-11 17:44:37 [37m[DEBUG][0m [PID-14] mqtt.go updateMosquittoConfig:166 setup mosquitto and gave HUP signal 
+2020-02-11 17:44:40 [37m[DEBUG][0m [PID-14] mqtt.go Setup:78 finished setup 
+2020-02-11 17:44:40 [33m[WARN][0m [PID-14] server.go Run:39 Network Error : dial tcp: address tcp/1883": unknown port 
+2020-02-11 17:44:40 [37m[DEBUG][0m [PID-14] server.go Run:39 setup mqtt 
+2020-02-11 17:44:40 [37m[DEBUG][0m [PID-14] mode.go Run:49 current families: [] 
+2020-02-11 17:44:40 [36m[INFO][0m [PID-14] server.go Run:579 Running on 0.0.0.0:8003 
+2020-02-11 17:51:21 [36m[INFO][0m [PID-14] server.go func1:1360 172.21.0.1:48636 POST / 2.902379ms 
+2020-02-11 17:51:26 [36m[INFO][0m [PID-14] server.go func1:1360 172.21.0.1:48636 GET /ping 343.946µs 
+2020-02-11 17:57:15 [36m[INFO][0m [PID-14] server.go func1:1360 172.21.0.1:48774 GET /ping 332.031µs 
+2020-02-11 18:01:12 [36m[INFO][0m [PID-14] server.go func1:1360 172.21.0.1:48774 GET /ping 272.856µs 
+2020-02-11 18:01:39 [36m[INFO][0m [PID-14] server.go func1:1360 172.21.0.1:48906 GET / 781.099µs 
+2020-02-11 18:22:18 [36m[INFO][0m [PID-14] server.go func1:1360 172.21.0.1:49254 GET / 910.384µs 

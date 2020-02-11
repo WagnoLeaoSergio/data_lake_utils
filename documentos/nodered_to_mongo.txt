@@ -1,0 +1,20 @@
+
+# ENTRANDO NO BASH DO MONGO E CRIANDO USUARIO PARA O NODE-RED
+
+- Executar os seguintes comando após a inicialização do serviço:
+
+    docker exec -it mongo2 bash
+    mongo
+    use admin
+    db.auth("root", "12345")
+    use nodered
+    db.createUser( { user: "wagno", pwd: "12345", roles: [{role: "readWrite", db: "nodered"}] })
+
+# NO NODE-RED:
+    1 - Criar node mongoDB;
+    2 - Criar servidor usando o ip do MongoDB da network do Docker (docker network inspect <docker_compose_network>);
+    3 - colocar o Database do Node-red;
+    4 - colocar as credenciais criadas anteriormente;
+    5 - Fazer Deploy do Flow;
+
+DONE!

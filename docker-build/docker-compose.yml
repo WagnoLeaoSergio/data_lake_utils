@@ -16,7 +16,7 @@ services:
       - MONGO_INITDB_DATABASE=nodered
       - MONGO_INITDB_ROOT_PASSWORD=12345
     volumes:
-        - ./mongoDB_data:/data/db
+        - ../mongoDB_DATA:/data/db
     ports:
     - "2701:2701"
     networks:
@@ -50,7 +50,7 @@ services:
       - MQTT_EXTERNAL='200.131.56.12'
       - MQTT_PORT=1884
     volumes:
-        - ./find3_DATA:/data
+        - ../find3_DATA:/data
     ports:
       - "1884:1883"
       - "8005:8003"
