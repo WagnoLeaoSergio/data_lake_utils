@@ -1,0 +1,62 @@
+version: '3.3'
+services:
+    find3:
+        container_name: find3
+        image: schollz/find3:latest
+        ports:
+            - '1884:1883'
+            - '8005:8003'
+        environment:
+            - MQTT_ADMIN=ADMIN
+            - MQTT_PASS=12345
+            - 'MQTT_SERVER=localhost:1883'
+            - MQTT_EXTERNAL=200.131.219.53
+            - MQTT_PORT=1884
+        volumes:
+            - './$USER/FIND_DATA:/data'
+    node-red:
+        container_name: nodered
+        user: root
+        image: nodered/node-red:latest    
+        ports:
+            - '1880:1880'
+        volumes:
+            - '.noderedData:/data'
+        networks:
+          intranet:
+            ipv4_address: 172.23.0.3
+    grafana:
+        container_name: grafana
+        image: grafana/grafana:latest
+        ports:
+            - '3000:3000'
+        networks:
+          intranet:
+            ipv4_address: 172.23.0.5
+    postgres:
+        container_name: postgres
+        image: postgres         
+        environment:
+            - POSTGRES_PASSWORD=dccexp2021
+            - POSTGRES_USER=dcc_user
+            - POSTGRES_DB=postgres_db
+        networks:
+          intranet:
+            ipv4_address: 172.23.0.2
+    mysql:
+        container_name: mysql
+        image: mysql 
+        environment:
+            - MYSQL_ROOT_PASSWORD=dccexp2021
+            - MYSQL_DATABASE=test_db
+            - MYSQL_USER=dcc_user
+            - MYSQL_PASSWORD=dcc_pass
+        networks:
+          intranet:
+            ipv4_address: 172.23.0.4
+networks:
+  intranet:
+    ipam:
+      driver: bridge
+      config:
+        - subnet: 172.23.0.0/16
